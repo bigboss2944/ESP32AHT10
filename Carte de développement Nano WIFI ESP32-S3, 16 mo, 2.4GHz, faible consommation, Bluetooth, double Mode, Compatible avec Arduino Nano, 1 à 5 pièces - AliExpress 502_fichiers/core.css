@@ -1,0 +1,1 @@
+:host{--transitions-duration-longer:800ms;--transitions-easing-easeInOut-custom:cubic-bezier(0.7,0,0.3,1)}body,ul{margin:0}ul{padding:0}img{vertical-align:middle}.hiding,.showing{animation-duration:var(--transitions-duration-longer);animation-fill-mode:forwards;animation-timing-function:var(--transitions-easing-easeInOut-custom)}.showing-no-animation{animation-duration:0s}

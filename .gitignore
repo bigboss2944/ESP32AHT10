@@ -1,41 +1,60 @@
+# Projet C++ (ESP32AHT10/)
+
 # Prerequisites
-*.d
+ESP32AHT10/**/*.d
 
 # Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+ESP32AHT10/**/*.slo
+ESP32AHT10/**/*.lo
+ESP32AHT10/**/*.o
+ESP32AHT10/**/*.obj
 
 # Precompiled Headers
-*.gch
-*.pch
+ESP32AHT10/**/*.gch
+ESP32AHT10/**/*.pch
 
 # Linker files
-*.ilk
+ESP32AHT10/**/*.ilk
 
 # Debugger Files
-*.pdb
+ESP32AHT10/**/*.pdb
 
 # Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+ESP32AHT10/**/*.so
+ESP32AHT10/**/*.dylib
+ESP32AHT10/**/*.dll
 
 # Fortran module files
-*.mod
-*.smod
+ESP32AHT10/**/*.mod
+ESP32AHT10/**/*.smod
 
 # Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+ESP32AHT10/**/*.lai
+ESP32AHT10/**/*.la
+ESP32AHT10/**/*.a
+ESP32AHT10/**/*.lib
 
 # Executables
-*.exe
-*.out
-*.app
+ESP32AHT10/**/*.exe
+ESP32AHT10/**/*.out
+ESP32AHT10/**/*.app
 
 # debug information files
-*.dwo
+ESP32AHT10/**/*.dwo
+
+# Répertoires de build courants
+ESP32AHT10/**/build/
+ESP32AHT10/**/cmake-build-*/
+ESP32AHT10/**/CMakeFiles/
+ESP32AHT10/**/CMakeCache.txt
+
+# Projet FreeCAD (garder les .FCStd, ignorer sauvegardes/temp)
+*.FCStd1
+*.FCStd2
+*.FCStd3
+*.FCStd4
+*.FCStd5
+*.FCStd~
+*.FCStd#
+*.FCBak
+*.FCTmp
