@@ -1,0 +1,44 @@
+menu "AHT10 Sensor"
+
+config AHT10_I2C_SDA
+    int "I2C SDA GPIO"
+    default 11
+
+config AHT10_I2C_SCL
+    int "I2C SCL GPIO"
+    default 12
+
+config AHT10_SAMPLE_PERIOD_MS
+    int "Sample period (ms)"
+    default 2000
+
+config AHT10_WIFI_ENABLE
+    bool "Enable WiFi"
+    default y
+
+config AHT10_WIFI_SSID
+    string "WiFi SSID"
+    default ""
+    depends on AHT10_WIFI_ENABLE
+
+config AHT10_WIFI_PASSWORD
+    string "WiFi password"
+    default ""
+    depends on AHT10_WIFI_ENABLE
+
+config AHT10_UDP_ENABLE
+    bool "Send data over UDP"
+    default y
+    depends on AHT10_WIFI_ENABLE
+
+config AHT10_UDP_HOST
+    string "UDP destination host (IPv4)"
+    default "192.168.1.100"
+    depends on AHT10_UDP_ENABLE
+
+config AHT10_UDP_PORT
+    int "UDP destination port"
+    default 5000
+    depends on AHT10_UDP_ENABLE
+
+endmenu

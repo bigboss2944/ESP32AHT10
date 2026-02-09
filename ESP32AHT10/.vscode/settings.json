@@ -1,3 +1,8 @@
 {
-    "idf.currentSetup": "/home/fabrice/esp/v5.5.2/esp-idf"
+    "idf.currentSetup": "/home/fabrice/esp/v5.5.2/esp-idf",
+    "idf.port": "/dev/ttyACM0",
+    "idf.target": "esp32s3"
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32s3"
+    }
 }
