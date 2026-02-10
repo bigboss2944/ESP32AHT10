@@ -11,5 +11,5 @@ idf_component_register(
 	"telemetry_store.c"
 	"telemetry_http.c"
 	INCLUDE_DIRS "."
-	REQUIRES nvs_flash esp_wifi esp_netif esp_event driver lwip esp_http_server
+		REQUIRES nvs_flash esp_wifi esp_netif esp_event driver lwip esp_http_server esp_timer
 )

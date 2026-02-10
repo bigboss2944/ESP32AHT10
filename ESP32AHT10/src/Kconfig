@@ -10,7 +10,7 @@ config AHT10_I2C_SCL
 
 config AHT10_SAMPLE_PERIOD_MS
     int "Sample period (ms)"
-    default 2000
+    default 600000
 
 config AHT10_WIFI_ENABLE
     bool "Enable WiFi"
