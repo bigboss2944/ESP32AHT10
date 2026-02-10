@@ -1,0 +1,49 @@
+services:
+  # C# .NET Data Collector Service
+  datacollector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sensor-datacollector
+    ports:
+      - "5000:5000/udp"
+    volumes:
+      - sensor-data:/data
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=/data/sensordata.db
+      - UdpListener__Port=5000
+      - Logging__LogLevel__Default=Information
+      - Logging__LogLevel__DataCollector=Debug
+    restart: unless-stopped
+    networks:
+      - sensor-network
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: sensor-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - sensor-data:/data:ro
+      - grafana-storage:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=frser-sqlite-datasource
+    restart: unless-stopped
+    networks:
+      - sensor-network
+    depends_on:
+      - datacollector
+
+volumes:
+  sensor-data:
+    driver: local
+  grafana-storage:
+    driver: local
+
+networks:
+  sensor-network:
+    driver: bridge
