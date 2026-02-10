@@ -15,6 +15,8 @@
 #include "udp_sender.h"
 #include "telemetry.h"
 #include "telemetry_udp.h"
+#include "telemetry_store.h"
+#include "telemetry_http.h"
 
 static const char *TAG = "AHT10";
 
@@ -41,6 +43,7 @@ static const char *TAG = "AHT10";
 typedef struct {
     Aht10Sensor sensor;
     TelemetryPublisher publisher;
+    TelemetryStore *store;
 } SensorTaskCtx;
 
 // Main sensor loop task.
@@ -54,6 +57,9 @@ static void sensor_task(void *arg)
         esp_err_t ret = aht10_read(&ctx->sensor, &temperature, &humidity);
         if (ret == ESP_OK) {
             ESP_LOGI(TAG, "Temp: %.2f C | Humidity: %.2f %%", temperature, humidity);
+            if (ctx->store) {
+                telemetry_store_update(ctx->store, temperature, humidity);
+            }
             ctx->publisher.publish(ctx->publisher.ctx, temperature, humidity);
         } else {
             ESP_LOGW(TAG, "AHT10 read failed: %s", esp_err_to_name(ret));
@@ -81,6 +87,9 @@ void app_main(void)
         .address = AHT10_I2C_ADDR,
     };
 
+    static TelemetryStore telemetry_store = {0};
+    telemetry_store_init(&telemetry_store);
+
     ESP_ERROR_CHECK(i2c_bus_init(&i2c_bus));
     vTaskDelay(pdMS_TO_TICKS(40));
     i2c_bus_scan(&i2c_bus, TAG);
@@ -100,6 +109,14 @@ void app_main(void)
     static WifiManager wifi_manager = {0};
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(wifi_manager_init(&wifi_manager, CONFIG_AHT10_WIFI_SSID, CONFIG_AHT10_WIFI_PASSWORD, TAG));
+#if CONFIG_AHT10_HTTP_ENABLE
+    static TelemetryHttpServer http_server = {0};
+    ESP_ERROR_CHECK(telemetry_http_server_start(&http_server,
+                                                &telemetry_store,
+                                                TAG,
+                                                CONFIG_AHT10_HTTP_PORT,
+                                                CONFIG_AHT10_HTTP_PATH));
+#endif
 #if CONFIG_AHT10_UDP_ENABLE
     static UdpSender udp_sender = {
         .socket_fd = -1,
@@ -123,6 +140,7 @@ void app_main(void)
             .publish = telemetry_noop_publish,
             .ctx = NULL,
         },
+        .store = &telemetry_store,
     };
 
     // Copy publisher config into the task context.

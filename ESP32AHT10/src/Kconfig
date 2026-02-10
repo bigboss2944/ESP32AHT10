@@ -41,4 +41,19 @@ config AHT10_UDP_PORT
     default 5000
     depends on AHT10_UDP_ENABLE
 
+config AHT10_HTTP_ENABLE
+    bool "Enable HTTP server"
+    default y
+    depends on AHT10_WIFI_ENABLE
+
+config AHT10_HTTP_PORT
+    int "HTTP server port"
+    default 80
+    depends on AHT10_HTTP_ENABLE
+
+config AHT10_HTTP_PATH
+    string "HTTP endpoint path"
+    default "/telemetry"
+    depends on AHT10_HTTP_ENABLE
+
 endmenu

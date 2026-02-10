@@ -8,6 +8,8 @@ idf_component_register(
 	"udp_sender.c"
 	"telemetry.c"
 	"telemetry_udp.c"
+	"telemetry_store.c"
+	"telemetry_http.c"
 	INCLUDE_DIRS "."
-	REQUIRES nvs_flash esp_wifi esp_netif esp_event driver lwip
+	REQUIRES nvs_flash esp_wifi esp_netif esp_event driver lwip esp_http_server
 )
