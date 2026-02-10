@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DataCollector.Api/DataCollector.Api.csproj" />
+  <Project Path="DataCollector.Core/DataCollector.Core.csproj" />
+  <Project Path="DataCollector.Infrastructure/DataCollector.Infrastructure.csproj" />
+  <Project Path="DataCollector.Tests/DataCollector.Tests.csproj" />
+</Solution>
