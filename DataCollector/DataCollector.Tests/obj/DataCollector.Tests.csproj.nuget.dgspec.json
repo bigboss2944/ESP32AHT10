@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj": {}
+    "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj": {}
   },
   "projects": {
-    "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj": {
+    "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj",
+        "projectUniqueName": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj",
         "projectName": "DataCollector.Core",
-        "projectPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/obj/",
+        "projectPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj",
+        "packagesPath": "/home/fabrice/.nuget/packages/",
+        "outputPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/home/fabrice/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -69,17 +69,17 @@
         }
       }
     },
-    "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj": {
+    "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj",
+        "projectUniqueName": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj",
         "projectName": "DataCollector.Infrastructure",
-        "projectPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Infrastructure/obj/",
+        "projectPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj",
+        "packagesPath": "/home/fabrice/.nuget/packages/",
+        "outputPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/home/fabrice/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -91,8 +91,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj": {
-                "projectPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj"
+              "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj": {
+                "projectPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj"
               }
             }
           }
@@ -144,17 +144,17 @@
         }
       }
     },
-    "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj": {
+    "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj",
+        "projectUniqueName": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj",
         "projectName": "DataCollector.Tests",
-        "projectPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Tests/obj/",
+        "projectPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Tests/DataCollector.Tests.csproj",
+        "packagesPath": "/home/fabrice/.nuget/packages/",
+        "outputPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/home/fabrice/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -166,11 +166,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj": {
-                "projectPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj"
+              "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj": {
+                "projectPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Core/DataCollector.Core.csproj"
               },
-              "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj": {
-                "projectPath": "/home/runner/work/ESP32AHT10/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj"
+              "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj": {
+                "projectPath": "/home/fabrice/3dPrints/ESP32AHT10/DataCollector/DataCollector.Infrastructure/DataCollector.Infrastructure.csproj"
               }
             }
           }
